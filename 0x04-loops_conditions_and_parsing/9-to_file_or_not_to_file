@@ -5,19 +5,19 @@ fl="school"
 
 if [[ -e "$fl" ]];
 then
-        echo "file exists"
+        echo "$fl file exists"
 
         if [[ -s "$fl" ]];
         then
-                echo "school file is not  empty"
+                echo "$fl file is not  empty"
         else
-                echo "school file is empty"
+                echo "$fl file is empty"
         fi
 
         if [[ -f "$fl" ]];
         then
-                echo "school is a regular file"
+                echo "$fl is a regular file"
         fi
 else
-        echo "file doesn't exist"
+        echo "$fl file doesn't exist"
 fi
