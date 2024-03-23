@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+for filename in *; do
+  # Check if filename starts with a number followed by a hyphen
+  if [[ $filename =~ ^[0-9]+- ]]; then
+    # Extract the part after the hyphen using parameter expansion
+    basename="${filename##*-}"
+    echo "$basename"
+  fi
+done
