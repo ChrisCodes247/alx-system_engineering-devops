@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
+# Displays the contents of the current directory in lst format.
+#   Only displays the part of the name after the first dash. 
 
-for filename in *; do
-  # Check if filename starts with a number followed by a hyphen
-  if [[ $filename =~ ^[0-9]+- ]]; then
-    # Extract the part after the hyphen using parameter expansion
-    basename="${filename##*-}"
-    echo "$basename"
-  fi
+lst=$(ls)
+for i in $lst; do
+  echo "$i" | cut -d '-' -f2
 done
