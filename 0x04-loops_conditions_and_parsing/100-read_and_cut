@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+format="cut -d: -f1,3,6 /etc/passwd"
+count=0
+
+while [[ $count -eq 0 ]];
+do
+$format
+((count++))
+done
